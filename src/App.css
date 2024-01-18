@@ -9,7 +9,9 @@ body{
   display: flex;
   align-items: start;
 }
-
+.ant-collapse-content-box {
+    background: #F5F7FF;
+  }
 #center {
   width: 100%;
 }

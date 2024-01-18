@@ -1,36 +1,23 @@
 import React, { Component } from "react";
-
-
+import { Collapse, Typography } from "antd";
 
 export class Nav extends Component {
   state = {
-    navs: ["Home", "Pricing", "Blog", "Become a member", "About Us"],
+    navs: ["Home", "Pricing", "Blog", "Become a member", "About Us"]
   };
   render() {
     return (
       <div className="flex items-center justify-between">
         <img src="./images/logo.svg" alt="" />
         <ul className="flex item-center gap-5 ">
-          {this.state.navs.map((nav) => (
+          {this.state.navs.map(nav => (
             <li>{nav}</li>
           ))}
         </ul>
         <form className="bg-white rounded-3xl flex items-center p-1.5">
-          <input
-            type="text"
-            id="first_name"
-            className="bg-transparent outline-none text-gray-900 text-sm"
-            placeholder="Search"
-            required
-          />
+          <input type="text" id="first_name" className="bg-transparent outline-none text-gray-900 text-sm" placeholder="Search" required />
           <div className="w-8 h-8 grid rounded-full place-items-center p-2 bg-violet-200">
-            <svg
-              width="14"
-              height="14"
-              viewBox="0 0 14 14"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M5.94518 0.000189675C4.04141 0.00100344 2.25313 0.913405 1.13482 2.45435C0.0163926 3.99546 -0.29712 5.9788 0.291544 7.78957C0.880374 9.60054 2.29995 11.0202 4.11063 11.6086C5.92119 12.1968 7.90385 11.8825 9.44413 10.7632L12.4064 13.7265C12.6422 13.9623 12.986 14.0545 13.3081 13.9682C13.6303 13.8818 13.8818 13.6302 13.9682 13.3079C14.0544 12.9856 13.9624 12.6418 13.7266 12.4059L10.7643 9.44267C11.6295 8.25308 12.023 6.78489 11.8689 5.3219C11.7147 3.85891 11.0238 2.50513 9.92963 1.52208C8.83561 0.539036 7.41587 -0.00323536 5.9454 1.45234e-05L5.94518 0.000189675ZM5.94518 10.0332C4.86257 10.0332 3.82436 9.603 3.05884 8.83724C2.29333 8.07147 1.86331 7.03293 1.86331 5.94997C1.86331 4.86701 2.29333 3.82846 3.05884 3.0627C3.82436 2.29694 4.86257 1.86679 5.94518 1.86679C7.02779 1.86679 8.066 2.29694 8.83152 3.0627C9.59704 3.82846 10.027 4.86701 10.027 5.94997C10.0257 7.03243 9.59541 8.07035 8.83006 8.83578C8.06488 9.60138 7.02733 10.0319 5.94518 10.0332Z"
                 fill="#FF5C00"
@@ -53,40 +40,24 @@ export class Header extends Component {
       <div className="flex items-center pt-20 gap-10 ">
         <div className="flex flex-col gap-5">
           <div className="font-prompt text-5xl tracking-widest ">
-            Find out talented{" "}
-            <span className="text-orange-400 ">freelancer</span> with better
-            review faster.
+            Find out talented <span className="text-orange-400 ">freelancer</span> with better review faster.
           </div>
           <div className="text-gray-400">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip.
           </div>
           <div className="flex item center gap-6">
-            <button
-              type="button"
-              className="bg-indigo-800 rounded-xl text-white py-3 px-4"
-            >
+            <button type="button" className="bg-indigo-800 rounded-xl text-white py-3 px-4">
               Discover Now
             </button>
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-white grid place-items-center">
-                <svg
-                  width="23"
-                  height="23"
-                  viewBox="0 0 23 23"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+                <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M23 11.5C23 17.8513 17.8513 23 11.5 23C5.14873 23 0 17.8513 0 11.5C0 5.14873 5.14873 0 11.5 0C17.8513 0 23 5.14873 23 11.5ZM1.85424 11.5C1.85424 16.8272 6.17279 21.1458 11.5 21.1458C16.8272 21.1458 21.1458 16.8272 21.1458 11.5C21.1458 6.17279 16.8272 1.85424 11.5 1.85424C6.17279 1.85424 1.85424 6.17279 1.85424 11.5Z"
                     fill="#FF5C00"
                   />
-                  <path
-                    d="M8.62392 6.15152L8.86801 17.9045L17.944 11.837L8.62392 6.15152Z"
-                    fill="#FF5C00"
-                  />
+                  <path d="M8.62392 6.15152L8.86801 17.9045L17.944 11.837L8.62392 6.15152Z" fill="#FF5C00" />
                 </svg>
               </div>
               <div className="text-base">Watch Demo</div>
@@ -118,25 +89,34 @@ export class HowItWorks extends Component {
 
   render() {
     return (
-      <div className="py-7 px-40 flex items-start justify-between">
-        <div className="">
-          <div className="text-orange-400 font-bold text-xs font-oswald ">
-            How it works
-          </div>
-          <div className="font-oswald text-4xl tracking-widest">
-            Start find a job you love with us easily
-          </div>
+      <div className="py-7 px-40 flex items-start justify-between gap-28">
+        <div className=" flex flex-col gap-8">
+          <div className="text-orange-400 font-bold text-xs font-oswald ">How it works</div>
+          <div className="font-oswald text-4xl tracking-widest">Start find a job you love with us easily</div>
+          <Collapse accordion={true} className="w-[450px] rounded-lg bg-[#F5F7FF] border-none ">
+            <Collapse.Panel  key={1} header={<div className="text-xl">Complete Profile</div>} className="">
+              <Typography.Text className="ps-10 ">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation.
+              </Typography.Text>
+            </Collapse.Panel>
+            <Collapse.Panel key={2} header={<div className="text-xl">Search Vacancies</div>} className="">
+              <Typography.Text className="ps-10 ">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation.
+              </Typography.Text>
+            </Collapse.Panel>
+            <Collapse.Panel key={3} header={<div className="text-xl">Apply Job</div>} className="">
+              <Typography.Text className="ps-10 ">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation.
+              </Typography.Text>
+            </Collapse.Panel>
+          </Collapse>
         </div>
-        <div className=" relative">
+        <div className="w-[850px] relative">
           <img src="./images/imageNout.png" alt="" />
-          <svg
-            className="absolute left-72 bottom-40"
-            width="77"
-            height="77"
-            viewBox="0 0 77 77"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+          <svg className="absolute left-72 bottom-40" width="77" height="77" viewBox="0 0 77 77" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="38.5" cy="38.5" r="38.5" fill="#414141" />
             <path
               d="M38.5 0C17.2704 0 0 17.2713 0 38.5C0 59.7296 17.2706 77 38.5 77C59.7294 77 77 59.7294 77 38.5C77 17.2706 59.7294 0 38.5 0ZM30.7252 55.4897V21.5103L54.7143 38.4998L30.7252 55.4897Z"
@@ -157,20 +137,12 @@ export class Choose extends Component {
         <div className="text-center">
           <div className="text-4xl font-oswald mb-5">Why Choose Us</div>
           <div className="text-gray-400 leading-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor <br /> incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br /> incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
           </div>
         </div>
         <div className="flex justify-between p-10 ">
           <div className="w-80 h-64 flex flex-col gap-4 p-5 rounded-lg hover:shadow-xl hover:bg-sky-50 hover:scale-110">
-            <svg
-              width="60"
-              height="60"
-              viewBox="0 0 60 60"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="60" height="60" rx="7" fill="#A73EED" />
               <path
                 d="M32.9747 30.328C32.9747 31.7896 31.7896 32.9747 30.328 32.9747C28.8665 32.9747 27.6814 31.7896 27.6814 30.328C27.6814 28.8665 28.8665 27.6814 30.328 27.6814C31.7896 27.6814 32.9747 28.8665 32.9747 30.328Z"
@@ -182,19 +154,10 @@ export class Choose extends Component {
               />
             </svg>
             <div className="text-xl">Trusted</div>
-            <div className="text-gray-400">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna.
-            </div>
+            <div className="text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</div>
           </div>
           <div className="w-80 h-64 flex flex-col gap-4 p-5 rounded-lg hover:shadow-xl hover:bg-sky-50 hover:scale-110">
-            <svg
-              width="60"
-              height="60"
-              viewBox="0 0 60 60"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="60" height="60" rx="7" fill="#A73EED" />
               <path
                 d="M32.9747 30.328C32.9747 31.7896 31.7896 32.9747 30.328 32.9747C28.8665 32.9747 27.6814 31.7896 27.6814 30.328C27.6814 28.8665 28.8665 27.6814 30.328 27.6814C31.7896 27.6814 32.9747 28.8665 32.9747 30.328Z"
@@ -206,19 +169,10 @@ export class Choose extends Component {
               />
             </svg>
             <div className="text-xl">Trusted</div>
-            <div className="text-gray-400">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna.
-            </div>
+            <div className="text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</div>
           </div>
           <div className="w-80 h-64 flex flex-col gap-4 p-5 rounded-lg hover:shadow-xl hover:bg-sky-50 hover:scale-110">
-            <svg
-              width="60"
-              height="60"
-              viewBox="0 0 60 60"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="60" height="60" rx="7" fill="#A73EED" />
               <path
                 d="M32.9747 30.328C32.9747 31.7896 31.7896 32.9747 30.328 32.9747C28.8665 32.9747 27.6814 31.7896 27.6814 30.328C27.6814 28.8665 28.8665 27.6814 30.328 27.6814C31.7896 27.6814 32.9747 28.8665 32.9747 30.328Z"
@@ -230,10 +184,7 @@ export class Choose extends Component {
               />
             </svg>
             <div className="text-xl">Trusted</div>
-            <div className="text-gray-400">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna.
-            </div>
+            <div className="text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</div>
           </div>
         </div>
       </div>
@@ -249,9 +200,7 @@ export class Jobs extends Component {
         <div className="text-center">
           <div className="text-4xl font-oswald mb-5">Featured Jobs</div>
           <div className="text-gray-400 leading-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor <br /> incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br /> incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
           </div>
         </div>
         <div className="flex item-center gap-12 p-10 ">
@@ -260,13 +209,7 @@ export class Jobs extends Component {
             <div className="">Database Programmer</div>
             <div className="text-blue-400">Marraz Team</div>
             <div className="flex items-center gap-2">
-              <svg
-                width="16"
-                height="18"
-                viewBox="0 0 16 18"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+              <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M5.34153 18H9.85085C12.7952 18 15.1911 15.6034 15.1911 12.6575C15.1911 11.4129 14.5939 9.96257 13.5943 8.77781L10.3529 4.93341L12.3806 1.11472C12.4391 1.00537 12.4288 0.872349 12.3549 0.772762C12.281 0.673748 12.1576 0.626822 12.0347 0.648636L9.0769 1.22594L7.81169 0.0829779C7.68957 -0.0276593 7.50316 -0.0276593 7.38033 0.0829779L6.11581 1.22594L3.15715 0.647938C3.0356 0.6267 2.91162 0.67305 2.837 0.772064C2.7631 0.871651 2.75349 1.00482 2.81132 1.11402L4.84024 4.93271L1.59757 8.77711C0.59725 9.96257 0 11.4135 0 12.6575C0.000573997 15.6034 2.39657 18 5.34175 18L5.34153 18ZM3.69573 1.40787L6.15027 1.88746C6.25058 1.90611 6.35218 1.87842 6.42737 1.81025L7.59546 0.754101L8.76425 1.81099C8.83944 1.87915 8.94362 1.90685 9.04134 1.88819L11.4952 1.40861L9.85199 4.50345C9.84683 4.50259 9.84238 4.49943 9.83649 4.49943H5.35546C5.34972 4.49943 5.34513 4.50259 5.33939 4.50331L3.69573 1.40787ZM2.08983 9.19256L5.50541 5.14243H9.68742L13.1024 9.19256C13.9941 10.2494 14.5483 11.5769 14.5483 12.6589C14.5483 15.2496 12.441 17.3578 9.85089 17.3578H5.34157C2.7514 17.3578 0.643429 15.2498 0.643429 12.6582C0.643429 11.5776 1.19763 10.2494 2.0899 9.19252L2.08983 9.19256Z"
                   fill="black"
@@ -282,13 +225,7 @@ export class Jobs extends Component {
               </div>
             </div>
             <div className="flex  items-center gap-2">
-              <svg
-                width="13"
-                height="18"
-                viewBox="0 0 13 18"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+              <svg width="13" height="18" viewBox="0 0 13 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M6.12292 0C2.73932 0 0 2.85003 0 6.3497C0 7.61121 0.368096 8.57031 0.97096 9.54584L5.93166 17.5749H5.9315C5.9731 17.6404 6.0454 17.6801 6.12291 17.6801C6.20042 17.6801 6.27271 17.6404 6.31431 17.5749L11.275 9.54584C11.8777 8.57031 12.2458 7.61125 12.2458 6.3497C12.2458 2.84999 9.5065 0 6.12289 0H6.12292ZM6.12292 0.453509C9.25201 0.453509 11.7923 3.08604 11.7923 6.34966C11.7923 7.5256 11.469 8.37868 10.8922 9.31182L6.12304 17.0291L1.35389 9.31182C0.777149 8.37868 0.453792 7.5256 0.453792 6.34966C0.453792 3.08596 2.99408 0.453509 6.12316 0.453509H6.12292ZM6.12292 3.17477C4.49739 3.17477 3.17481 4.49735 3.17481 6.12288C3.17481 7.74841 4.49739 9.07099 6.12292 9.07099C7.74845 9.07099 9.07103 7.74841 9.07103 6.12288C9.07103 4.49735 7.74845 3.17477 6.12292 3.17477ZM6.12292 3.62828C7.50325 3.62828 8.61753 4.74239 8.61753 6.12288C8.61753 7.50321 7.50341 8.61749 6.12292 8.61749C4.74259 8.61749 3.62832 7.50337 3.62832 6.12288C3.62832 4.74255 4.74243 3.62828 6.12292 3.62828Z"
                   fill="black"
@@ -300,22 +237,14 @@ export class Jobs extends Component {
               </div>
             </div>
             <div className="flex items-center gap-10 mt-3">
-              <svg
-                width="49"
-                height="49"
-                viewBox="0 0 49 49"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+              <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="24.5" cy="24.5" r="24.5" fill="#FF5C00" />
                 <path
                   d="M14.6996 17.8396C12.4324 20.2925 12.4346 24.2398 14.6996 26.6948L24.7332 37.5754C28.0816 33.9528 31.4302 30.33 34.7788 26.7072C37.046 24.2543 37.046 20.3048 34.7788 17.8521C32.5115 15.3992 28.8608 15.399 26.5939 17.8521L24.7452 19.8522L22.885 17.8397C20.6177 15.3868 16.967 15.3868 14.7001 17.8397L14.6996 17.8396Z"
                   fill="white"
                 />
               </svg>
-              <button className="px-6 py-4 rounded-3xl text-white bg-blue-800">
-                Apply Now
-              </button>
+              <button className="px-6 py-4 rounded-3xl text-white bg-blue-800">Apply Now</button>
             </div>
           </div>
           <div className="w-80 h-1/2 rounded-2xl p-10 flex flex-col items-center gap-4 bg-blue-50">
@@ -323,13 +252,7 @@ export class Jobs extends Component {
             <div className="">Database Programmer</div>
             <div className="text-blue-400">Marraz Team</div>
             <div className="flex items-center gap-2">
-              <svg
-                width="16"
-                height="18"
-                viewBox="0 0 16 18"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+              <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M5.34153 18H9.85085C12.7952 18 15.1911 15.6034 15.1911 12.6575C15.1911 11.4129 14.5939 9.96257 13.5943 8.77781L10.3529 4.93341L12.3806 1.11472C12.4391 1.00537 12.4288 0.872349 12.3549 0.772762C12.281 0.673748 12.1576 0.626822 12.0347 0.648636L9.0769 1.22594L7.81169 0.0829779C7.68957 -0.0276593 7.50316 -0.0276593 7.38033 0.0829779L6.11581 1.22594L3.15715 0.647938C3.0356 0.6267 2.91162 0.67305 2.837 0.772064C2.7631 0.871651 2.75349 1.00482 2.81132 1.11402L4.84024 4.93271L1.59757 8.77711C0.59725 9.96257 0 11.4135 0 12.6575C0.000573997 15.6034 2.39657 18 5.34175 18L5.34153 18ZM3.69573 1.40787L6.15027 1.88746C6.25058 1.90611 6.35218 1.87842 6.42737 1.81025L7.59546 0.754101L8.76425 1.81099C8.83944 1.87915 8.94362 1.90685 9.04134 1.88819L11.4952 1.40861L9.85199 4.50345C9.84683 4.50259 9.84238 4.49943 9.83649 4.49943H5.35546C5.34972 4.49943 5.34513 4.50259 5.33939 4.50331L3.69573 1.40787ZM2.08983 9.19256L5.50541 5.14243H9.68742L13.1024 9.19256C13.9941 10.2494 14.5483 11.5769 14.5483 12.6589C14.5483 15.2496 12.441 17.3578 9.85089 17.3578H5.34157C2.7514 17.3578 0.643429 15.2498 0.643429 12.6582C0.643429 11.5776 1.19763 10.2494 2.0899 9.19252L2.08983 9.19256Z"
                   fill="black"
@@ -345,13 +268,7 @@ export class Jobs extends Component {
               </div>
             </div>
             <div className="flex  items-center gap-2">
-              <svg
-                width="13"
-                height="18"
-                viewBox="0 0 13 18"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+              <svg width="13" height="18" viewBox="0 0 13 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M6.12292 0C2.73932 0 0 2.85003 0 6.3497C0 7.61121 0.368096 8.57031 0.97096 9.54584L5.93166 17.5749H5.9315C5.9731 17.6404 6.0454 17.6801 6.12291 17.6801C6.20042 17.6801 6.27271 17.6404 6.31431 17.5749L11.275 9.54584C11.8777 8.57031 12.2458 7.61125 12.2458 6.3497C12.2458 2.84999 9.5065 0 6.12289 0H6.12292ZM6.12292 0.453509C9.25201 0.453509 11.7923 3.08604 11.7923 6.34966C11.7923 7.5256 11.469 8.37868 10.8922 9.31182L6.12304 17.0291L1.35389 9.31182C0.777149 8.37868 0.453792 7.5256 0.453792 6.34966C0.453792 3.08596 2.99408 0.453509 6.12316 0.453509H6.12292ZM6.12292 3.17477C4.49739 3.17477 3.17481 4.49735 3.17481 6.12288C3.17481 7.74841 4.49739 9.07099 6.12292 9.07099C7.74845 9.07099 9.07103 7.74841 9.07103 6.12288C9.07103 4.49735 7.74845 3.17477 6.12292 3.17477ZM6.12292 3.62828C7.50325 3.62828 8.61753 4.74239 8.61753 6.12288C8.61753 7.50321 7.50341 8.61749 6.12292 8.61749C4.74259 8.61749 3.62832 7.50337 3.62832 6.12288C3.62832 4.74255 4.74243 3.62828 6.12292 3.62828Z"
                   fill="black"
@@ -363,22 +280,14 @@ export class Jobs extends Component {
               </div>
             </div>
             <div className="flex items-center gap-10 mt-3">
-              <svg
-                width="49"
-                height="49"
-                viewBox="0 0 49 49"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+              <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="24.5" cy="24.5" r="24.5" fill="#FF5C00" />
                 <path
                   d="M14.6996 17.8396C12.4324 20.2925 12.4346 24.2398 14.6996 26.6948L24.7332 37.5754C28.0816 33.9528 31.4302 30.33 34.7788 26.7072C37.046 24.2543 37.046 20.3048 34.7788 17.8521C32.5115 15.3992 28.8608 15.399 26.5939 17.8521L24.7452 19.8522L22.885 17.8397C20.6177 15.3868 16.967 15.3868 14.7001 17.8397L14.6996 17.8396Z"
                   fill="white"
                 />
               </svg>
-              <button className="px-6 py-4 rounded-3xl text-white bg-blue-800">
-                Apply Now
-              </button>
+              <button className="px-6 py-4 rounded-3xl text-white bg-blue-800">Apply Now</button>
             </div>
           </div>
           <div className="w-80 h-1/2 rounded-2xl p-10 flex flex-col items-center gap-4 bg-blue-50">
@@ -386,13 +295,7 @@ export class Jobs extends Component {
             <div className="">Database Programmer</div>
             <div className="text-blue-400">Marraz Team</div>
             <div className="flex items-center gap-2">
-              <svg
-                width="16"
-                height="18"
-                viewBox="0 0 16 18"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+              <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M5.34153 18H9.85085C12.7952 18 15.1911 15.6034 15.1911 12.6575C15.1911 11.4129 14.5939 9.96257 13.5943 8.77781L10.3529 4.93341L12.3806 1.11472C12.4391 1.00537 12.4288 0.872349 12.3549 0.772762C12.281 0.673748 12.1576 0.626822 12.0347 0.648636L9.0769 1.22594L7.81169 0.0829779C7.68957 -0.0276593 7.50316 -0.0276593 7.38033 0.0829779L6.11581 1.22594L3.15715 0.647938C3.0356 0.6267 2.91162 0.67305 2.837 0.772064C2.7631 0.871651 2.75349 1.00482 2.81132 1.11402L4.84024 4.93271L1.59757 8.77711C0.59725 9.96257 0 11.4135 0 12.6575C0.000573997 15.6034 2.39657 18 5.34175 18L5.34153 18ZM3.69573 1.40787L6.15027 1.88746C6.25058 1.90611 6.35218 1.87842 6.42737 1.81025L7.59546 0.754101L8.76425 1.81099C8.83944 1.87915 8.94362 1.90685 9.04134 1.88819L11.4952 1.40861L9.85199 4.50345C9.84683 4.50259 9.84238 4.49943 9.83649 4.49943H5.35546C5.34972 4.49943 5.34513 4.50259 5.33939 4.50331L3.69573 1.40787ZM2.08983 9.19256L5.50541 5.14243H9.68742L13.1024 9.19256C13.9941 10.2494 14.5483 11.5769 14.5483 12.6589C14.5483 15.2496 12.441 17.3578 9.85089 17.3578H5.34157C2.7514 17.3578 0.643429 15.2498 0.643429 12.6582C0.643429 11.5776 1.19763 10.2494 2.0899 9.19252L2.08983 9.19256Z"
                   fill="black"
@@ -408,13 +311,7 @@ export class Jobs extends Component {
               </div>
             </div>
             <div className="flex  items-center gap-2">
-              <svg
-                width="13"
-                height="18"
-                viewBox="0 0 13 18"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+              <svg width="13" height="18" viewBox="0 0 13 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M6.12292 0C2.73932 0 0 2.85003 0 6.3497C0 7.61121 0.368096 8.57031 0.97096 9.54584L5.93166 17.5749H5.9315C5.9731 17.6404 6.0454 17.6801 6.12291 17.6801C6.20042 17.6801 6.27271 17.6404 6.31431 17.5749L11.275 9.54584C11.8777 8.57031 12.2458 7.61125 12.2458 6.3497C12.2458 2.84999 9.5065 0 6.12289 0H6.12292ZM6.12292 0.453509C9.25201 0.453509 11.7923 3.08604 11.7923 6.34966C11.7923 7.5256 11.469 8.37868 10.8922 9.31182L6.12304 17.0291L1.35389 9.31182C0.777149 8.37868 0.453792 7.5256 0.453792 6.34966C0.453792 3.08596 2.99408 0.453509 6.12316 0.453509H6.12292ZM6.12292 3.17477C4.49739 3.17477 3.17481 4.49735 3.17481 6.12288C3.17481 7.74841 4.49739 9.07099 6.12292 9.07099C7.74845 9.07099 9.07103 7.74841 9.07103 6.12288C9.07103 4.49735 7.74845 3.17477 6.12292 3.17477ZM6.12292 3.62828C7.50325 3.62828 8.61753 4.74239 8.61753 6.12288C8.61753 7.50321 7.50341 8.61749 6.12292 8.61749C4.74259 8.61749 3.62832 7.50337 3.62832 6.12288C3.62832 4.74255 4.74243 3.62828 6.12292 3.62828Z"
                   fill="black"
@@ -426,22 +323,14 @@ export class Jobs extends Component {
               </div>
             </div>
             <div className="flex items-center gap-10 mt-3">
-              <svg
-                width="49"
-                height="49"
-                viewBox="0 0 49 49"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+              <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="24.5" cy="24.5" r="24.5" fill="#FF5C00" />
                 <path
                   d="M14.6996 17.8396C12.4324 20.2925 12.4346 24.2398 14.6996 26.6948L24.7332 37.5754C28.0816 33.9528 31.4302 30.33 34.7788 26.7072C37.046 24.2543 37.046 20.3048 34.7788 17.8521C32.5115 15.3992 28.8608 15.399 26.5939 17.8521L24.7452 19.8522L22.885 17.8397C20.6177 15.3868 16.967 15.3868 14.7001 17.8397L14.6996 17.8396Z"
                   fill="white"
                 />
               </svg>
-              <button className="px-6 py-4 rounded-3xl text-white bg-blue-800">
-                Apply Now
-              </button>
+              <button className="px-6 py-4 rounded-3xl text-white bg-blue-800">Apply Now</button>
             </div>
           </div>
           <div className="w-80 h-1/2 rounded-2xl p-10 flex flex-col items-center gap-4 bg-blue-50">
@@ -449,13 +338,7 @@ export class Jobs extends Component {
             <div className="">Database Programmer</div>
             <div className="text-blue-400">Marraz Team</div>
             <div className="flex items-center gap-2">
-              <svg
-                width="16"
-                height="18"
-                viewBox="0 0 16 18"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+              <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M5.34153 18H9.85085C12.7952 18 15.1911 15.6034 15.1911 12.6575C15.1911 11.4129 14.5939 9.96257 13.5943 8.77781L10.3529 4.93341L12.3806 1.11472C12.4391 1.00537 12.4288 0.872349 12.3549 0.772762C12.281 0.673748 12.1576 0.626822 12.0347 0.648636L9.0769 1.22594L7.81169 0.0829779C7.68957 -0.0276593 7.50316 -0.0276593 7.38033 0.0829779L6.11581 1.22594L3.15715 0.647938C3.0356 0.6267 2.91162 0.67305 2.837 0.772064C2.7631 0.871651 2.75349 1.00482 2.81132 1.11402L4.84024 4.93271L1.59757 8.77711C0.59725 9.96257 0 11.4135 0 12.6575C0.000573997 15.6034 2.39657 18 5.34175 18L5.34153 18ZM3.69573 1.40787L6.15027 1.88746C6.25058 1.90611 6.35218 1.87842 6.42737 1.81025L7.59546 0.754101L8.76425 1.81099C8.83944 1.87915 8.94362 1.90685 9.04134 1.88819L11.4952 1.40861L9.85199 4.50345C9.84683 4.50259 9.84238 4.49943 9.83649 4.49943H5.35546C5.34972 4.49943 5.34513 4.50259 5.33939 4.50331L3.69573 1.40787ZM2.08983 9.19256L5.50541 5.14243H9.68742L13.1024 9.19256C13.9941 10.2494 14.5483 11.5769 14.5483 12.6589C14.5483 15.2496 12.441 17.3578 9.85089 17.3578H5.34157C2.7514 17.3578 0.643429 15.2498 0.643429 12.6582C0.643429 11.5776 1.19763 10.2494 2.0899 9.19252L2.08983 9.19256Z"
                   fill="black"
@@ -471,13 +354,7 @@ export class Jobs extends Component {
               </div>
             </div>
             <div className="flex  items-center gap-2">
-              <svg
-                width="13"
-                height="18"
-                viewBox="0 0 13 18"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+              <svg width="13" height="18" viewBox="0 0 13 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M6.12292 0C2.73932 0 0 2.85003 0 6.3497C0 7.61121 0.368096 8.57031 0.97096 9.54584L5.93166 17.5749H5.9315C5.9731 17.6404 6.0454 17.6801 6.12291 17.6801C6.20042 17.6801 6.27271 17.6404 6.31431 17.5749L11.275 9.54584C11.8777 8.57031 12.2458 7.61125 12.2458 6.3497C12.2458 2.84999 9.5065 0 6.12289 0H6.12292ZM6.12292 0.453509C9.25201 0.453509 11.7923 3.08604 11.7923 6.34966C11.7923 7.5256 11.469 8.37868 10.8922 9.31182L6.12304 17.0291L1.35389 9.31182C0.777149 8.37868 0.453792 7.5256 0.453792 6.34966C0.453792 3.08596 2.99408 0.453509 6.12316 0.453509H6.12292ZM6.12292 3.17477C4.49739 3.17477 3.17481 4.49735 3.17481 6.12288C3.17481 7.74841 4.49739 9.07099 6.12292 9.07099C7.74845 9.07099 9.07103 7.74841 9.07103 6.12288C9.07103 4.49735 7.74845 3.17477 6.12292 3.17477ZM6.12292 3.62828C7.50325 3.62828 8.61753 4.74239 8.61753 6.12288C8.61753 7.50321 7.50341 8.61749 6.12292 8.61749C4.74259 8.61749 3.62832 7.50337 3.62832 6.12288C3.62832 4.74255 4.74243 3.62828 6.12292 3.62828Z"
                   fill="black"
@@ -489,22 +366,14 @@ export class Jobs extends Component {
               </div>
             </div>
             <div className="flex items-center gap-10 mt-3">
-              <svg
-                width="49"
-                height="49"
-                viewBox="0 0 49 49"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+              <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="24.5" cy="24.5" r="24.5" fill="#FF5C00" />
                 <path
                   d="M14.6996 17.8396C12.4324 20.2925 12.4346 24.2398 14.6996 26.6948L24.7332 37.5754C28.0816 33.9528 31.4302 30.33 34.7788 26.7072C37.046 24.2543 37.046 20.3048 34.7788 17.8521C32.5115 15.3992 28.8608 15.399 26.5939 17.8521L24.7452 19.8522L22.885 17.8397C20.6177 15.3868 16.967 15.3868 14.7001 17.8397L14.6996 17.8396Z"
                   fill="white"
                 />
               </svg>
-              <button className="px-6 py-4 rounded-3xl text-white bg-blue-800">
-                Apply Now
-              </button>
+              <button className="px-6 py-4 rounded-3xl text-white bg-blue-800">Apply Now</button>
             </div>
           </div>
         </div>
@@ -519,13 +388,9 @@ export class Customer extends Component {
     return (
       <div className="p-10 w-full">
         <div className="text-center">
-          <div className="text-4xl font-oswald mb-5">
-            What Our Customer Says
-          </div>
+          <div className="text-4xl font-oswald mb-5">What Our Customer Says</div>
           <div className="text-gray-400 leading-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor <br /> incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br /> incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
           </div>
         </div>
         <div className="flex item-center gap-12 p-10">
@@ -536,13 +401,7 @@ export class Customer extends Component {
               <div className="text-gray-400">CEO OF THE LOVE STUDENTS</div>
             </div>
             <div className="flex justify-end">
-              <svg
-                width="130"
-                height="17"
-                viewBox="0 0 130 17"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+              <svg width="130" height="17" viewBox="0 0 130 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M110.084 12.8652H108.15V16H105.885V12.8652H99.3906V11.127L105.914 1.68359H108.15V10.9609H110.084V12.8652ZM105.885 10.9609V7.41602C105.885 7.12305 105.888 6.82682 105.895 6.52734C105.908 6.22135 105.921 5.92839 105.934 5.64844C105.947 5.36849 105.96 5.11133 105.973 4.87695C105.986 4.63607 105.995 4.4375 106.002 4.28125H105.924C105.8 4.54167 105.663 4.80859 105.514 5.08203C105.364 5.34896 105.204 5.60938 105.035 5.86328L101.52 10.9609H105.885ZM112.154 14.7891C112.154 14.2552 112.291 13.8809 112.564 13.666C112.844 13.4447 113.183 13.334 113.58 13.334C113.977 13.334 114.315 13.4447 114.595 13.666C114.882 13.8809 115.025 14.2552 115.025 14.7891C115.025 15.3099 114.882 15.6875 114.595 15.9219C114.315 16.1497 113.977 16.2637 113.58 16.2637C113.183 16.2637 112.844 16.1497 112.564 15.9219C112.291 15.6875 112.154 15.3099 112.154 14.7891ZM122.446 1.52734C123.273 1.52734 124.019 1.65755 124.683 1.91797C125.347 2.17188 125.874 2.55273 126.265 3.06055C126.655 3.56836 126.851 4.19661 126.851 4.94531C126.851 5.52474 126.73 6.0293 126.489 6.45898C126.255 6.88867 125.936 7.26628 125.532 7.5918C125.129 7.91081 124.676 8.19401 124.175 8.44141C124.735 8.71484 125.249 9.0306 125.718 9.38867C126.193 9.74023 126.574 10.1536 126.861 10.6289C127.154 11.1042 127.3 11.6608 127.3 12.2988C127.3 13.0996 127.095 13.793 126.685 14.3789C126.281 14.9583 125.718 15.4076 124.995 15.7266C124.273 16.0391 123.43 16.1953 122.466 16.1953C121.431 16.1953 120.549 16.0423 119.82 15.7363C119.09 15.4303 118.537 14.9941 118.159 14.4277C117.782 13.8548 117.593 13.1712 117.593 12.377C117.593 11.7194 117.723 11.1497 117.984 10.668C118.244 10.1862 118.592 9.76953 119.029 9.41797C119.471 9.06641 119.956 8.77018 120.484 8.5293C120.034 8.26237 119.624 7.96289 119.253 7.63086C118.882 7.29232 118.586 6.90495 118.364 6.46875C118.15 6.02604 118.042 5.51497 118.042 4.93555C118.042 4.19336 118.241 3.57161 118.638 3.07031C119.035 2.5625 119.566 2.17839 120.23 1.91797C120.9 1.65755 121.639 1.52734 122.446 1.52734ZM119.78 12.2891C119.78 12.9141 120.002 13.4284 120.445 13.832C120.887 14.2357 121.548 14.4375 122.427 14.4375C123.299 14.4375 123.963 14.2389 124.419 13.8418C124.875 13.4447 125.103 12.9206 125.103 12.2695C125.103 11.8529 124.986 11.485 124.751 11.166C124.523 10.847 124.214 10.5638 123.823 10.3164C123.439 10.0625 123.013 9.82812 122.544 9.61328L122.232 9.48633C121.724 9.70117 121.288 9.94531 120.923 10.2188C120.558 10.4857 120.275 10.7884 120.073 11.127C119.878 11.4655 119.78 11.8529 119.78 12.2891ZM122.427 3.29492C121.795 3.29492 121.275 3.45117 120.864 3.76367C120.461 4.06966 120.259 4.51237 120.259 5.0918C120.259 5.50195 120.357 5.85352 120.552 6.14648C120.754 6.43945 121.024 6.69336 121.362 6.9082C121.701 7.11654 122.075 7.31185 122.486 7.49414C122.883 7.31836 123.241 7.1263 123.56 6.91797C123.885 6.70312 124.142 6.44922 124.331 6.15625C124.527 5.85677 124.624 5.4987 124.624 5.08203C124.624 4.50911 124.419 4.06966 124.009 3.76367C123.605 3.45117 123.078 3.29492 122.427 3.29492Z"
                   fill="#323232"
@@ -570,23 +429,13 @@ export class Customer extends Component {
               </svg>
             </div>
             <div className="text-gray-500 leading-6 text-lg">
-              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam,quis nostrud exercitation ullamco laboris
-              nisi ut aliquip.Lorem ipsum dolor sit amet, consectetur adipiscing
-              elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-              aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco
-              laboris nisi ut aliquip.”
+              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud
+              exercitation ullamco laboris nisi ut aliquip.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+              aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip.”
             </div>
             <div className="flex justify-between">
               <div className="flex gap-4">
-                <svg
-                  width="41"
-                  height="41"
-                  viewBox="0 0 41 41"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+                <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="41" height="41" rx="7" fill="#EF6010" />
                   <path
                     d="M11.968 21.0721L19.0782 28.1824C19.5254 28.6296 19.5254 29.3451 19.0782 29.7476C18.631 30.15 17.9155 30.1948 17.513 29.7476L9.59729 21.8318C9.15008 21.3846 9.15008 20.6691 9.59729 20.2666L17.8708 12.0381C18.0944 11.8145 18.3627 11.7251 18.6757 11.7251C18.9888 11.7251 19.2571 11.8145 19.4807 12.0381C19.9279 12.4853 19.9279 13.2009 19.4807 13.6033L11.968 21.0721Z"
@@ -597,20 +446,8 @@ export class Customer extends Component {
                     fill="white"
                   />
                 </svg>
-                <svg
-                  width="42"
-                  height="41"
-                  viewBox="0 0 42 41"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect
-                    x="0.833252"
-                    width="41"
-                    height="41"
-                    rx="7"
-                    fill="#F3F5FF"
-                  />
+                <svg width="42" height="41" viewBox="0 0 42 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.833252" width="41" height="41" rx="7" fill="#F3F5FF" />
                 </svg>
               </div>
               <img src="./images/users.png" alt="" />
@@ -658,9 +495,7 @@ export class Prices extends Component {
         <div className="text-center">
           <div className="text-4xl font-oswald mb-5">Pricing Plan</div>
           <div className="text-gray-400 leading-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor <br /> incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br /> incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
           </div>
         </div>
         <div className="flex justify-center gap-10 my-12">
@@ -672,13 +507,7 @@ export class Prices extends Component {
             </div>
             <div className="flex items-center flex-col gap-5">
               <div className="flex items-center gap-3">
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M7.924 0C3.56065 0 0 3.56062 0 7.924C0 12.2873 3.56077 15.848 7.924 15.848C12.2872 15.848 15.848 12.2872 15.848 7.924C15.848 3.56076 12.2872 0 7.924 0ZM11.6287 6.27745L7.36829 10.3321C7.26535 10.435 7.14188 10.4762 7.01842 10.4762C6.87428 10.4762 6.75081 10.435 6.64802 10.3321L4.21929 7.8828C4.01341 7.6976 4.01341 7.36825 4.21929 7.16236C4.40449 6.95649 4.73384 6.95649 4.93973 7.16236L7.01846 9.26174L10.929 5.53644C11.1349 5.35123 11.4435 5.35123 11.6494 5.55697C11.8346 5.76284 11.8346 6.07166 11.6289 6.2774L11.6287 6.27745Z"
                     fill="#FF5C00"
@@ -687,13 +516,7 @@ export class Prices extends Component {
                 <div className="text-gray-300">Lorem ipsum dolor sit amet.</div>
               </div>
               <div className="flex items-center gap-3">
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M7.924 0C3.56065 0 0 3.56062 0 7.924C0 12.2873 3.56077 15.848 7.924 15.848C12.2872 15.848 15.848 12.2872 15.848 7.924C15.848 3.56076 12.2872 0 7.924 0ZM11.6287 6.27745L7.36829 10.3321C7.26535 10.435 7.14188 10.4762 7.01842 10.4762C6.87428 10.4762 6.75081 10.435 6.64802 10.3321L4.21929 7.8828C4.01341 7.6976 4.01341 7.36825 4.21929 7.16236C4.40449 6.95649 4.73384 6.95649 4.93973 7.16236L7.01846 9.26174L10.929 5.53644C11.1349 5.35123 11.4435 5.35123 11.6494 5.55697C11.8346 5.76284 11.8346 6.07166 11.6289 6.2774L11.6287 6.27745Z"
                     fill="#FF5C00"
@@ -702,13 +525,7 @@ export class Prices extends Component {
                 <div className="text-gray-300">Lorem ipsum dolor sit amet.</div>
               </div>
               <div className="flex items-center gap-3">
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M7.924 0C3.56065 0 0 3.56062 0 7.924C0 12.2873 3.56077 15.848 7.924 15.848C12.2872 15.848 15.848 12.2872 15.848 7.924C15.848 3.56076 12.2872 0 7.924 0ZM11.6287 6.27745L7.36829 10.3321C7.26535 10.435 7.14188 10.4762 7.01842 10.4762C6.87428 10.4762 6.75081 10.435 6.64802 10.3321L4.21929 7.8828C4.01341 7.6976 4.01341 7.36825 4.21929 7.16236C4.40449 6.95649 4.73384 6.95649 4.93973 7.16236L7.01846 9.26174L10.929 5.53644C11.1349 5.35123 11.4435 5.35123 11.6494 5.55697C11.8346 5.76284 11.8346 6.07166 11.6289 6.2774L11.6287 6.27745Z"
                     fill="#FF5C00"
@@ -716,9 +533,7 @@ export class Prices extends Component {
                 </svg>
                 <div className="text-gray-300">Lorem ipsum dolor sit amet.</div>
               </div>
-              <button className="px-6 py-4 rounded-3xl text-white bg-blue-800">
-                Purchase Now
-              </button>
+              <button className="px-6 py-4 rounded-3xl text-white bg-blue-800">Purchase Now</button>
             </div>
           </div>
           <div className="p-10 rounded-3xl  flex flex-col items-center gap-10 hover:shadow-xl hover:bg-sky-50 hover:scale-110">
@@ -729,13 +544,7 @@ export class Prices extends Component {
             </div>
             <div className="flex items-center flex-col gap-5">
               <div className="flex items-center gap-3">
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M7.924 0C3.56065 0 0 3.56062 0 7.924C0 12.2873 3.56077 15.848 7.924 15.848C12.2872 15.848 15.848 12.2872 15.848 7.924C15.848 3.56076 12.2872 0 7.924 0ZM11.6287 6.27745L7.36829 10.3321C7.26535 10.435 7.14188 10.4762 7.01842 10.4762C6.87428 10.4762 6.75081 10.435 6.64802 10.3321L4.21929 7.8828C4.01341 7.6976 4.01341 7.36825 4.21929 7.16236C4.40449 6.95649 4.73384 6.95649 4.93973 7.16236L7.01846 9.26174L10.929 5.53644C11.1349 5.35123 11.4435 5.35123 11.6494 5.55697C11.8346 5.76284 11.8346 6.07166 11.6289 6.2774L11.6287 6.27745Z"
                     fill="#FF5C00"
@@ -744,13 +553,7 @@ export class Prices extends Component {
                 <div className="text-gray-300">Lorem ipsum dolor sit amet.</div>
               </div>
               <div className="flex items-center gap-3">
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M7.924 0C3.56065 0 0 3.56062 0 7.924C0 12.2873 3.56077 15.848 7.924 15.848C12.2872 15.848 15.848 12.2872 15.848 7.924C15.848 3.56076 12.2872 0 7.924 0ZM11.6287 6.27745L7.36829 10.3321C7.26535 10.435 7.14188 10.4762 7.01842 10.4762C6.87428 10.4762 6.75081 10.435 6.64802 10.3321L4.21929 7.8828C4.01341 7.6976 4.01341 7.36825 4.21929 7.16236C4.40449 6.95649 4.73384 6.95649 4.93973 7.16236L7.01846 9.26174L10.929 5.53644C11.1349 5.35123 11.4435 5.35123 11.6494 5.55697C11.8346 5.76284 11.8346 6.07166 11.6289 6.2774L11.6287 6.27745Z"
                     fill="#FF5C00"
@@ -759,13 +562,7 @@ export class Prices extends Component {
                 <div className="text-gray-300">Lorem ipsum dolor sit amet.</div>
               </div>
               <div className="flex items-center gap-3">
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M7.924 0C3.56065 0 0 3.56062 0 7.924C0 12.2873 3.56077 15.848 7.924 15.848C12.2872 15.848 15.848 12.2872 15.848 7.924C15.848 3.56076 12.2872 0 7.924 0ZM11.6287 6.27745L7.36829 10.3321C7.26535 10.435 7.14188 10.4762 7.01842 10.4762C6.87428 10.4762 6.75081 10.435 6.64802 10.3321L4.21929 7.8828C4.01341 7.6976 4.01341 7.36825 4.21929 7.16236C4.40449 6.95649 4.73384 6.95649 4.93973 7.16236L7.01846 9.26174L10.929 5.53644C11.1349 5.35123 11.4435 5.35123 11.6494 5.55697C11.8346 5.76284 11.8346 6.07166 11.6289 6.2774L11.6287 6.27745Z"
                     fill="#FF5C00"
@@ -773,9 +570,7 @@ export class Prices extends Component {
                 </svg>
                 <div className="text-gray-300">Lorem ipsum dolor sit amet.</div>
               </div>
-              <button className="px-6 py-4 rounded-3xl text-white bg-blue-800">
-                Purchase Now
-              </button>
+              <button className="px-6 py-4 rounded-3xl text-white bg-blue-800">Purchase Now</button>
             </div>
           </div>
           <div className="p-10 rounded-3xl  flex flex-col items-center gap-10 hover:shadow-xl hover:bg-sky-50 hover:scale-110">
@@ -786,13 +581,7 @@ export class Prices extends Component {
             </div>
             <div className="flex items-center flex-col gap-5">
               <div className="flex items-center gap-3">
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M7.924 0C3.56065 0 0 3.56062 0 7.924C0 12.2873 3.56077 15.848 7.924 15.848C12.2872 15.848 15.848 12.2872 15.848 7.924C15.848 3.56076 12.2872 0 7.924 0ZM11.6287 6.27745L7.36829 10.3321C7.26535 10.435 7.14188 10.4762 7.01842 10.4762C6.87428 10.4762 6.75081 10.435 6.64802 10.3321L4.21929 7.8828C4.01341 7.6976 4.01341 7.36825 4.21929 7.16236C4.40449 6.95649 4.73384 6.95649 4.93973 7.16236L7.01846 9.26174L10.929 5.53644C11.1349 5.35123 11.4435 5.35123 11.6494 5.55697C11.8346 5.76284 11.8346 6.07166 11.6289 6.2774L11.6287 6.27745Z"
                     fill="#FF5C00"
@@ -801,13 +590,7 @@ export class Prices extends Component {
                 <div className="text-gray-300">Lorem ipsum dolor sit amet.</div>
               </div>
               <div className="flex items-center gap-3">
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M7.924 0C3.56065 0 0 3.56062 0 7.924C0 12.2873 3.56077 15.848 7.924 15.848C12.2872 15.848 15.848 12.2872 15.848 7.924C15.848 3.56076 12.2872 0 7.924 0ZM11.6287 6.27745L7.36829 10.3321C7.26535 10.435 7.14188 10.4762 7.01842 10.4762C6.87428 10.4762 6.75081 10.435 6.64802 10.3321L4.21929 7.8828C4.01341 7.6976 4.01341 7.36825 4.21929 7.16236C4.40449 6.95649 4.73384 6.95649 4.93973 7.16236L7.01846 9.26174L10.929 5.53644C11.1349 5.35123 11.4435 5.35123 11.6494 5.55697C11.8346 5.76284 11.8346 6.07166 11.6289 6.2774L11.6287 6.27745Z"
                     fill="#FF5C00"
@@ -816,13 +599,7 @@ export class Prices extends Component {
                 <div className="text-gray-300">Lorem ipsum dolor sit amet.</div>
               </div>
               <div className="flex items-center gap-3">
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M7.924 0C3.56065 0 0 3.56062 0 7.924C0 12.2873 3.56077 15.848 7.924 15.848C12.2872 15.848 15.848 12.2872 15.848 7.924C15.848 3.56076 12.2872 0 7.924 0ZM11.6287 6.27745L7.36829 10.3321C7.26535 10.435 7.14188 10.4762 7.01842 10.4762C6.87428 10.4762 6.75081 10.435 6.64802 10.3321L4.21929 7.8828C4.01341 7.6976 4.01341 7.36825 4.21929 7.16236C4.40449 6.95649 4.73384 6.95649 4.93973 7.16236L7.01846 9.26174L10.929 5.53644C11.1349 5.35123 11.4435 5.35123 11.6494 5.55697C11.8346 5.76284 11.8346 6.07166 11.6289 6.2774L11.6287 6.27745Z"
                     fill="#FF5C00"
@@ -830,9 +607,7 @@ export class Prices extends Component {
                 </svg>
                 <div className="text-gray-300">Lorem ipsum dolor sit amet.</div>
               </div>
-              <button className="px-6 py-4 rounded-3xl text-white bg-blue-800">
-                Purchase Now
-              </button>
+              <button className="px-6 py-4 rounded-3xl text-white bg-blue-800">Purchase Now</button>
             </div>
           </div>
         </div>
@@ -843,29 +618,11 @@ export class Prices extends Component {
 export class Footer extends Component {
   state = {
     olearn: ["Olearn", "About", "What we offer", "Leadership", "Careers"],
-    courses: [
-      "Courses",
-      "Classroom Courses",
-      "Virtual Courses",
-      "E-Learning Courses",
-      "Off Line Courses",
-    ],
-    community: [
-      "Community",
-      "Learner",
-      "Partners",
-      "Developers",
-      "Teaching Centre",
-    ],
+    courses: ["Courses", "Classroom Courses", "Virtual Courses", "E-Learning Courses", "Off Line Courses"],
+    community: ["Community", "Learner", "Partners", "Developers", "Teaching Centre"],
     links: ["Quick Links", "Home", "Professional Edu", "Courses", "Admissions"],
     more: ["More", "Press", "Inventors", "Helps", "Terms"],
-    bottomFooter: [
-      "Quick Links",
-      "Home",
-      " Professional Edu",
-      "Courses",
-      "Admissions",
-    ],
+    bottomFooter: ["Quick Links", "Home", " Professional Edu", "Courses", "Admissions"]
   };
 
   render() {
@@ -873,27 +630,27 @@ export class Footer extends Component {
       <div className="bg-indigo-200 py-24 px-40 w-full">
         <div className="flex justify-between ">
           <ul className="flex flex-col gap-5 ">
-            {this.state.olearn.map((ole) => (
+            {this.state.olearn.map(ole => (
               <li className="text-gray-500">{ole}</li>
             ))}
           </ul>
           <ul className="flex flex-col gap-5 ">
-            {this.state.courses.map((course) => (
+            {this.state.courses.map(course => (
               <li className="text-gray-500">{course}</li>
             ))}
           </ul>
           <ul className="flex flex-col gap-5 ">
-            {this.state.community.map((learning) => (
+            {this.state.community.map(learning => (
               <li className="text-gray-500">{learning}</li>
             ))}
           </ul>
           <ul className="flex flex-col gap-5 ">
-            {this.state.links.map((link) => (
+            {this.state.links.map(link => (
               <li className="text-gray-500">{link}</li>
             ))}
           </ul>
           <ul className="flex flex-col gap-5 ">
-            {this.state.more.map((single) => (
+            {this.state.more.map(single => (
               <li className="text-gray-500">{single}</li>
             ))}
           </ul>
@@ -902,63 +659,32 @@ export class Footer extends Component {
         <div className="flex items-center justify-between">
           <img src="./images/logo.svg" alt="" />
           <ul className="flex gap-8 ">
-            {this.state.bottomFooter.map((theme) => (
-              <li >{theme}</li>
+            {this.state.bottomFooter.map(theme => (
+              <li>{theme}</li>
             ))}
           </ul>
-            <svg
-              width="142"
-              height="30"
-              viewBox="0 0 142 30"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <ellipse
-                cx="14.4969"
-                cy="14.5102"
-                rx="14.4969"
-                ry="14.5102"
-                fill="white"
-              />
-              <ellipse
-                cx="52.1107"
-                cy="14.5102"
-                rx="14.4969"
-                ry="14.5102"
-                fill="white"
-              />
-              <ellipse
-                cx="89.7244"
-                cy="14.5102"
-                rx="14.4969"
-                ry="14.5102"
-                fill="#4238AF"
-                fill-opacity="0.81"
-              />
-              <ellipse
-                cx="127.338"
-                cy="14.5102"
-                rx="14.4969"
-                ry="14.5102"
-                fill="white"
-              />
-              <path
-                d="M49.9877 9.41211C48.3498 9.41211 47.0172 10.7468 47.0172 12.3866V16.6348C47.0172 18.2744 48.3506 19.6084 49.9889 19.6084H54.2332C55.8713 19.6084 57.2042 18.2738 57.2042 16.634V12.3854C57.2042 10.746 55.8707 9.41211 54.2324 9.41211H49.9877ZM55.1668 11.0435C55.3917 11.0435 55.5743 11.2262 55.5743 11.4514C55.5743 11.6765 55.3917 11.8592 55.1668 11.8592C54.9419 11.8592 54.7593 11.6765 54.7593 11.4514C54.7593 11.2262 54.9419 11.0435 55.1668 11.0435ZM52.1107 11.8592C53.5715 11.8592 54.7593 13.0481 54.7593 14.5103C54.7593 15.9724 53.5713 17.1613 52.1107 17.1613C50.6499 17.1613 49.462 15.9722 49.462 14.5103C49.462 13.0483 50.6499 11.8592 52.1107 11.8592ZM52.1107 12.6749C51.0979 12.6749 50.277 13.4966 50.277 14.5103C50.277 15.524 51.0979 16.3456 52.1107 16.3456C53.1235 16.3456 53.9443 15.524 53.9443 14.5103C53.9443 13.4966 53.1235 12.6749 52.1107 12.6749Z"
-                fill="#979797"
-              />
-              <path
-                d="M14.497 8.62793C11.2515 8.62793 8.61987 11.2755 8.61987 14.5408C8.61987 17.5052 10.7906 19.9531 13.6184 20.3807V16.1077H12.1642V14.5535H13.6184V13.5192C13.6184 11.807 14.4475 11.0556 15.8621 11.0556C16.5393 11.0556 16.8981 11.1063 17.0674 11.1291V12.4856H16.1026C15.5022 12.4856 15.2925 13.0587 15.2925 13.7041V14.5535H17.0522L16.8137 16.1077H15.2925V20.3929C18.161 20.0018 20.3742 17.5343 20.3742 14.5408C20.3742 11.2755 17.7428 8.62793 14.497 8.62793Z"
-                fill="#979797"
-              />
-              <path
-                d="M97.9522 10.8032C97.4338 11.0411 96.8763 11.1996 96.2882 11.2746C96.8862 10.907 97.3461 10.3208 97.562 9.62823C97.0026 9.96788 96.3828 10.2172 95.7234 10.3487C95.1968 9.77069 94.4457 9.41211 93.6135 9.41211C92.015 9.41211 90.7195 10.7421 90.7195 12.3818C90.7195 12.6137 90.7457 12.8398 90.7951 13.0593C88.3903 12.9342 86.2575 11.7505 84.8306 9.95407C84.5799 10.393 84.4389 10.907 84.4389 11.4495C84.4389 12.4805 84.9487 13.3879 85.726 13.9227C85.2515 13.9076 84.805 13.771 84.414 13.5519C84.414 13.5608 84.414 13.5741 84.414 13.5866C84.414 15.0273 85.4118 16.2269 86.7345 16.5C86.4927 16.5686 86.2373 16.6067 85.974 16.6067C85.787 16.6067 85.605 16.5847 85.4286 16.5519C85.7969 17.7292 86.8654 18.5898 88.1312 18.6152C87.1408 19.4103 85.8935 19.8865 84.537 19.8865C84.3026 19.8865 84.0736 19.8727 83.8471 19.8443C85.1283 20.6845 86.65 21.1771 88.2834 21.1771C93.6059 21.1771 96.5175 16.6512 96.5175 12.725C96.5175 12.5963 96.5135 12.4682 96.5076 12.3416C97.0759 11.9262 97.5655 11.4019 97.9522 10.8032Z"
-                fill="white"
-              />
-              <path
-                d="M135.15 11.1646C135.013 10.4639 134.357 9.95354 133.596 9.79422C132.457 9.57143 130.349 9.41211 128.069 9.41211C125.79 9.41211 123.648 9.57143 122.508 9.79422C121.749 9.95354 121.091 10.4315 120.954 11.1646C120.815 11.9612 120.677 13.0764 120.677 14.5103C120.677 15.9441 120.815 17.0594 120.987 17.856C121.126 18.5567 121.782 19.067 122.542 19.2263C123.751 19.4491 125.824 19.6084 128.104 19.6084C130.384 19.6084 132.457 19.4491 133.666 19.2263C134.426 19.067 135.081 18.5891 135.22 17.856C135.358 17.0594 135.531 15.9118 135.566 14.5103C135.496 13.0764 135.323 11.9612 135.15 11.1646ZM126.204 16.7407V12.2798L130.418 14.5103L126.204 16.7407Z"
-                fill="#979797"
-              />
-            </svg>
+          <svg width="142" height="30" viewBox="0 0 142 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="14.4969" cy="14.5102" rx="14.4969" ry="14.5102" fill="white" />
+            <ellipse cx="52.1107" cy="14.5102" rx="14.4969" ry="14.5102" fill="white" />
+            <ellipse cx="89.7244" cy="14.5102" rx="14.4969" ry="14.5102" fill="#4238AF" fill-opacity="0.81" />
+            <ellipse cx="127.338" cy="14.5102" rx="14.4969" ry="14.5102" fill="white" />
+            <path
+              d="M49.9877 9.41211C48.3498 9.41211 47.0172 10.7468 47.0172 12.3866V16.6348C47.0172 18.2744 48.3506 19.6084 49.9889 19.6084H54.2332C55.8713 19.6084 57.2042 18.2738 57.2042 16.634V12.3854C57.2042 10.746 55.8707 9.41211 54.2324 9.41211H49.9877ZM55.1668 11.0435C55.3917 11.0435 55.5743 11.2262 55.5743 11.4514C55.5743 11.6765 55.3917 11.8592 55.1668 11.8592C54.9419 11.8592 54.7593 11.6765 54.7593 11.4514C54.7593 11.2262 54.9419 11.0435 55.1668 11.0435ZM52.1107 11.8592C53.5715 11.8592 54.7593 13.0481 54.7593 14.5103C54.7593 15.9724 53.5713 17.1613 52.1107 17.1613C50.6499 17.1613 49.462 15.9722 49.462 14.5103C49.462 13.0483 50.6499 11.8592 52.1107 11.8592ZM52.1107 12.6749C51.0979 12.6749 50.277 13.4966 50.277 14.5103C50.277 15.524 51.0979 16.3456 52.1107 16.3456C53.1235 16.3456 53.9443 15.524 53.9443 14.5103C53.9443 13.4966 53.1235 12.6749 52.1107 12.6749Z"
+              fill="#979797"
+            />
+            <path
+              d="M14.497 8.62793C11.2515 8.62793 8.61987 11.2755 8.61987 14.5408C8.61987 17.5052 10.7906 19.9531 13.6184 20.3807V16.1077H12.1642V14.5535H13.6184V13.5192C13.6184 11.807 14.4475 11.0556 15.8621 11.0556C16.5393 11.0556 16.8981 11.1063 17.0674 11.1291V12.4856H16.1026C15.5022 12.4856 15.2925 13.0587 15.2925 13.7041V14.5535H17.0522L16.8137 16.1077H15.2925V20.3929C18.161 20.0018 20.3742 17.5343 20.3742 14.5408C20.3742 11.2755 17.7428 8.62793 14.497 8.62793Z"
+              fill="#979797"
+            />
+            <path
+              d="M97.9522 10.8032C97.4338 11.0411 96.8763 11.1996 96.2882 11.2746C96.8862 10.907 97.3461 10.3208 97.562 9.62823C97.0026 9.96788 96.3828 10.2172 95.7234 10.3487C95.1968 9.77069 94.4457 9.41211 93.6135 9.41211C92.015 9.41211 90.7195 10.7421 90.7195 12.3818C90.7195 12.6137 90.7457 12.8398 90.7951 13.0593C88.3903 12.9342 86.2575 11.7505 84.8306 9.95407C84.5799 10.393 84.4389 10.907 84.4389 11.4495C84.4389 12.4805 84.9487 13.3879 85.726 13.9227C85.2515 13.9076 84.805 13.771 84.414 13.5519C84.414 13.5608 84.414 13.5741 84.414 13.5866C84.414 15.0273 85.4118 16.2269 86.7345 16.5C86.4927 16.5686 86.2373 16.6067 85.974 16.6067C85.787 16.6067 85.605 16.5847 85.4286 16.5519C85.7969 17.7292 86.8654 18.5898 88.1312 18.6152C87.1408 19.4103 85.8935 19.8865 84.537 19.8865C84.3026 19.8865 84.0736 19.8727 83.8471 19.8443C85.1283 20.6845 86.65 21.1771 88.2834 21.1771C93.6059 21.1771 96.5175 16.6512 96.5175 12.725C96.5175 12.5963 96.5135 12.4682 96.5076 12.3416C97.0759 11.9262 97.5655 11.4019 97.9522 10.8032Z"
+              fill="white"
+            />
+            <path
+              d="M135.15 11.1646C135.013 10.4639 134.357 9.95354 133.596 9.79422C132.457 9.57143 130.349 9.41211 128.069 9.41211C125.79 9.41211 123.648 9.57143 122.508 9.79422C121.749 9.95354 121.091 10.4315 120.954 11.1646C120.815 11.9612 120.677 13.0764 120.677 14.5103C120.677 15.9441 120.815 17.0594 120.987 17.856C121.126 18.5567 121.782 19.067 122.542 19.2263C123.751 19.4491 125.824 19.6084 128.104 19.6084C130.384 19.6084 132.457 19.4491 133.666 19.2263C134.426 19.067 135.081 18.5891 135.22 17.856C135.358 17.0594 135.531 15.9118 135.566 14.5103C135.496 13.0764 135.323 11.9612 135.15 11.1646ZM126.204 16.7407V12.2798L130.418 14.5103L126.204 16.7407Z"
+              fill="#979797"
+            />
+          </svg>
         </div>
       </div>
     );
