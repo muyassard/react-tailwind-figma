@@ -7,9 +7,9 @@ export class Nav extends Component {
   };
   render() {
     return (
-      <div className="flex items-center justify-between">
+      <div className="flex items-center gap-2 flex-wrap  justify-between">
         <img src="./images/logo.svg" alt="" />
-        <ul className="flex item-center gap-5 ">
+        <ul className=" flex flex-wrap justify-center cursor-pointer  gap-5 ">
           {this.state.navs.map(nav => (
             <li>{nav}</li>
           ))}
@@ -27,7 +27,8 @@ export class Nav extends Component {
         </form>
         <div className="flex item-center">
           <div className="text-blue-600 mx-2">Login</div>
-          <div className="">/ Sing Up</div>
+          <div className=""> / </div>
+          <div className=""> SingUp</div>
         </div>
       </div>
     );
@@ -37,8 +38,8 @@ export class Header extends Component {
   state = {};
   render() {
     return (
-      <div className="flex items-center pt-20 gap-10 ">
-        <div className="flex flex-col gap-5">
+      <div className=" flex lg:flex-wrap  justify-center items-center pt-20 gap-10 ">
+        <div className="flex flex-col gap-5 text-base/6">
           <div className="font-prompt text-5xl tracking-widest ">
             Find out talented <span className="text-orange-400 ">freelancer</span> with better review faster.
           </div>
@@ -73,7 +74,7 @@ export class Brands extends Component {
   state = {};
   render() {
     return (
-      <div className="flex items-center justify-between py-16 px-40 ">
+      <div className="flex flex-wrap gap-10 items-center justify-between py-16 px-40 ">
         <img src="./images/brandDesign.png" alt="" />
         <img src="./images/branding.png" alt="" />
         <img src="./images/greenery.png" alt="" />
@@ -89,12 +90,12 @@ export class HowItWorks extends Component {
 
   render() {
     return (
-      <div className="py-7 px-40 flex items-start justify-between gap-28">
+      <div className="py-7 px-[10%] flex lg:flex-wrap  items-start justify-between gap-28">
         <div className=" flex flex-col gap-8">
           <div className="text-orange-400 font-bold text-xs font-oswald ">How it works</div>
           <div className="font-oswald text-4xl tracking-widest">Start find a job you love with us easily</div>
-          <Collapse accordion={true} className="w-[450px] rounded-lg bg-[#F5F7FF] border-none ">
-            <Collapse.Panel  key={1} header={<div className="text-xl">Complete Profile</div>} className="">
+          <Collapse accordion={true} className=" rounded-lg bg-[#F5F7FF] border-none ">
+            <Collapse.Panel key={1} header={<div className="text-xl">Complete Profile</div>} className="">
               <Typography.Text className="ps-10 ">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                 exercitation.
@@ -116,13 +117,6 @@ export class HowItWorks extends Component {
         </div>
         <div className="w-[850px] relative">
           <img src="./images/imageNout.png" alt="" />
-          <svg className="absolute left-72 bottom-40" width="77" height="77" viewBox="0 0 77 77" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="38.5" cy="38.5" r="38.5" fill="#414141" />
-            <path
-              d="M38.5 0C17.2704 0 0 17.2713 0 38.5C0 59.7296 17.2706 77 38.5 77C59.7294 77 77 59.7294 77 38.5C77 17.2706 59.7294 0 38.5 0ZM30.7252 55.4897V21.5103L54.7143 38.4998L30.7252 55.4897Z"
-              fill="white"
-            />
-          </svg>
         </div>
       </div>
     );
@@ -133,15 +127,15 @@ export class Choose extends Component {
 
   render() {
     return (
-      <div className="py-7 px-40 ">
+      <div className="py-7 px-[10%] ">
         <div className="text-center">
           <div className="text-4xl font-oswald mb-5">Why Choose Us</div>
           <div className="text-gray-400 leading-6">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br /> incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
           </div>
         </div>
-        <div className="flex justify-between p-10 ">
-          <div className="w-80 h-64 flex flex-col gap-4 p-5 rounded-lg hover:shadow-xl hover:bg-sky-50 hover:scale-110">
+        <div className="flex  justify-between p-10 ">
+          <div className="w-80  flex flex-col gap-4 p-5 rounded-lg hover:shadow-xl hover:bg-sky-50 hover:scale-110">
             <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="60" height="60" rx="7" fill="#A73EED" />
               <path
@@ -156,7 +150,7 @@ export class Choose extends Component {
             <div className="text-xl">Trusted</div>
             <div className="text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</div>
           </div>
-          <div className="w-80 h-64 flex flex-col gap-4 p-5 rounded-lg hover:shadow-xl hover:bg-sky-50 hover:scale-110">
+          <div className="w-80  flex flex-col gap-4 p-5 rounded-lg hover:shadow-xl hover:bg-sky-50 hover:scale-110">
             <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="60" height="60" rx="7" fill="#A73EED" />
               <path
@@ -171,7 +165,7 @@ export class Choose extends Component {
             <div className="text-xl">Trusted</div>
             <div className="text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</div>
           </div>
-          <div className="w-80 h-64 flex flex-col gap-4 p-5 rounded-lg hover:shadow-xl hover:bg-sky-50 hover:scale-110">
+          <div className="w-80  flex flex-col gap-4 p-5 rounded-lg hover:shadow-xl hover:bg-sky-50 hover:scale-110">
             <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="60" height="60" rx="7" fill="#A73EED" />
               <path
@@ -203,7 +197,8 @@ export class Jobs extends Component {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br /> incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
           </div>
         </div>
-        <div className="flex item-center gap-12 p-10 ">
+
+        <div className="flex xl:overflow-auto  overflow-hidden item-center gap-12 p-10 ">
           <div className="w-80 h-1/2 rounded-2xl p-10 flex flex-col items-center gap-4 bg-blue-50">
             <img className="w-10 h-10" src="./images/person.png" alt="" />
             <div className="">Database Programmer</div>
@@ -393,7 +388,7 @@ export class Customer extends Component {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br /> incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
           </div>
         </div>
-        <div className="flex item-center gap-12 p-10">
+        <div className="flex lg:flex-wrap item-center gap-12 p-10">
           <img src="./images/customer.png" alt="" />
           <div className="flex flex-col gap-8 w-5/6">
             <div className="">
@@ -464,7 +459,7 @@ export class Statistics extends Component {
   render() {
     return (
       <div className="py-10 px-40 w-full">
-        <div className="flex justify-between py-16 px-32 bg-violet-300 rounded-2xl">
+        <div className="flex flex-wrap gap-10 justify-between py-16 px-32 bg-violet-300 rounded-2xl">
           <div className="text-center">
             <div className="text-indigo-500 text-4xl font-semibold">36,789</div>
             <div className="text-white">Talented Freelancer</div>
@@ -627,7 +622,7 @@ export class Footer extends Component {
 
   render() {
     return (
-      <div className="bg-indigo-200 py-24 px-40 w-full">
+      <div className="bg-indigo-200 py-24 px-[10%] w-full">
         <div className="flex justify-between ">
           <ul className="flex flex-col gap-5 ">
             {this.state.olearn.map(ole => (
@@ -658,7 +653,7 @@ export class Footer extends Component {
         <div className="w-full h-1 bg-indigo-600 my-24"></div>
         <div className="flex items-center justify-between">
           <img src="./images/logo.svg" alt="" />
-          <ul className="flex gap-8 ">
+          <ul className="flex gap-8 flex-wrap justify-center ">
             {this.state.bottomFooter.map(theme => (
               <li>{theme}</li>
             ))}
